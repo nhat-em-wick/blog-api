@@ -37,6 +37,7 @@ const categoryController = {
   getOne: async (req, res, next) => {
     try {
       const { slug } = req.params;
+     
       const {errorCate, category} = await getBySlug(slug);
       if (errorCate && !category) {
         return next({status: errorCate.status, message: errorCate.message})

@@ -1,12 +1,12 @@
 const path = require("path");
 
-require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+
 
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 5000;
+
 const routerV1 = require("./api/v1/routes");
 
 require("./config/dbConfig");
@@ -30,6 +30,5 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server start on port: ${port}`);
-});
+module.exports = app
+

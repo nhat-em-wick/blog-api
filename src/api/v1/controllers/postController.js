@@ -8,13 +8,14 @@ const {
 
 const postController = {
   getAll: async (req, res, next) => {
-    const page = req.query.page || 1;
-    const limit = req.query.limit || 10;
+    const page = +req.query.page || 1;
+    const limit = +req.query.limit || 10;
     const q = req.query.q;
+    const category = req.query.category
     
     try {
       res.status(200).json({
-        elements: await getAll({page, limit, q}),
+        elements: await getAll({page, limit, q, category}),
         code: 200,
         message: "success",
       });

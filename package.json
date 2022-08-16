@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --inspect ./src/server.js"
+    "dev": "nodemon --inspect server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

@@ -89,7 +89,7 @@ const editCate = async (slug, name, parentId) => {
     { slug },
     {
       name: name,
-      parentId: parentId,
+      parentId: parentId || '62e17427d5b99a1f2db150e9',
     },
     {
       new: true,

@@ -4,7 +4,6 @@ const categoryRoutes = require('./categoryRoutes')
 const pageRoute = require('./pageRoute')
 const authRoute = require('./authRoute')
 const router = (app) => {
-
   app.use(`${prefix}/posts`, postRoutes)
   app.use(`${prefix}/categories`, categoryRoutes)
   app.use(`${prefix}/pages`, pageRoute)
